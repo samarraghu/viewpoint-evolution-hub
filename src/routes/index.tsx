@@ -28,10 +28,10 @@ function Dashboard() {
       <div className="flex-1 flex flex-col min-w-0">
         <TopBar />
         <Filters />
-        <main className="flex-1 px-6 pb-8 space-y-5">
+        <main className="flex-1 px-6 pb-6 space-y-3">
           <KpiBar />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-1">
             <Card title="Reach & NBA Trends — Monthly">
               <ReachChart />
             </Card>
@@ -40,7 +40,7 @@ function Dashboard() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
             <Card title="Rep Omnichannel Adoption">
               <RepDonut />
             </Card>
@@ -59,7 +59,7 @@ function Dashboard() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
             <div className="lg:col-span-2">
               <Card title="US Regional Omnichannel Adoption — Territory Heatmap">
                 <RegionalHeatmap />

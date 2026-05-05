@@ -7,14 +7,14 @@ const kpis = [
 
 export function KpiBar() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-6 pt-5">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 px-6 pt-3">
       {kpis.map((k) => (
-        <div key={k.label} className="bg-card border rounded-lg p-4 shadow-sm">
+        <div key={k.label} className="bg-card border rounded-lg p-3 shadow-sm">
           <div className="text-xs text-muted-foreground">{k.label}</div>
-          <div className={`text-2xl font-semibold mt-1 ${k.tone === "warning" ? "text-destructive" : "text-success"}`}>
+          <div className={`text-xl font-semibold mt-0.5 ${k.tone === "warning" ? "text-destructive" : "text-success"}`}>
             {k.value}
           </div>
-          <div className={`text-[11px] mt-1 ${k.tone === "warning" ? "text-destructive/80" : "text-success/90"}`}>
+          <div className={`text-[11px] mt-0.5 ${k.tone === "warning" ? "text-destructive/80" : "text-success/90"}`}>
             {k.delta}
           </div>
         </div>
