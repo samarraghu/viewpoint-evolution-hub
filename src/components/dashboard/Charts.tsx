@@ -112,7 +112,7 @@ export function RepDonut() {
 }
 
 const segments = ["Specialists","High Prescribers","Mid Prescribers","Low Prescribers"];
-const journeyData = ["Awareness → Interest","Interest → Consideration","Consideration → Intent","Intent → Rx"].map((s, i) => ({
+const journeyData = ["Awareness","Interest","Consideration","Intent → Rx"].map((s, i) => ({
   stage: s,
   Specialists: 78 - i * 12,
   HighPrescribers: 70 - i * 13,
@@ -122,10 +122,10 @@ const journeyData = ["Awareness → Interest","Interest → Consideration","Cons
 export function JourneyChart() {
   return (
     <ResponsiveContainer width="100%" height={240}>
-      <BarChart data={journeyData} layout="vertical" margin={{ top: 5, right: 15, left: 5, bottom: 0 }}>
+      <BarChart data={journeyData} layout="vertical" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}%`} />
-        <YAxis type="category" dataKey="stage" tick={{ fontSize: 10 }} width={130} />
+        <YAxis type="category" dataKey="stage" tick={{ fontSize: 10 }} width={85} />
         <Tooltip />
         <Legend wrapperStyle={{ fontSize: 10 }} />
         {segments.map((s, i) => (
