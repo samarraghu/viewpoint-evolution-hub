@@ -22,16 +22,17 @@ const colors = {
 export function ReachChart() {
   return (
     <ResponsiveContainer width="100%" height={210}>
-      <LineChart data={reachData} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
+      <LineChart data={reachData} margin={{ top: 5, right: 5, left: -10, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis dataKey="month" tick={{ fontSize: 11 }} />
-        <YAxis tick={{ fontSize: 11 }} />
+        <YAxis yAxisId="left" tick={{ fontSize: 11 }} />
+        <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}%`} domain={[0, 100]} />
         <Tooltip contentStyle={{ fontSize: 12 }} />
         <Legend wrapperStyle={{ fontSize: 11 }} />
-        <Line type="monotone" dataKey="uniqueReach" name="Unique reach" stroke={colors.c1} strokeWidth={2} dot={{ r: 2 }} />
-        <Line type="monotone" dataKey="uniqueTargetReach" name="Unique target reach" stroke={colors.c2} strokeWidth={2} dot={{ r: 2 }} />
-        <Line type="monotone" dataKey="nbaCompletion" name="NBA completion rate %" stroke={colors.c3} strokeWidth={2} strokeDasharray="4 3" dot={{ r: 2 }} />
-        <Line type="monotone" dataKey="nbaRejection" name="NBA rejection rate %" stroke={colors.c4} strokeWidth={2} strokeDasharray="4 3" dot={{ r: 2 }} />
+        <Line yAxisId="left" type="monotone" dataKey="uniqueReach" name="Unique reach" stroke={colors.c1} strokeWidth={2} dot={{ r: 2 }} />
+        <Line yAxisId="left" type="monotone" dataKey="uniqueTargetReach" name="Unique target reach" stroke={colors.c2} strokeWidth={2} dot={{ r: 2 }} />
+        <Line yAxisId="right" type="monotone" dataKey="nbaCompletion" name="NBA completion rate %" stroke={colors.c3} strokeWidth={2} strokeDasharray="4 3" dot={{ r: 2 }} />
+        <Line yAxisId="right" type="monotone" dataKey="nbaRejection" name="NBA rejection rate %" stroke={colors.c4} strokeWidth={2} strokeDasharray="4 3" dot={{ r: 2 }} />
       </LineChart>
     </ResponsiveContainer>
   );
