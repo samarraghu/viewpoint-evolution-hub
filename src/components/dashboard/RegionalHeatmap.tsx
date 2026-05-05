@@ -16,15 +16,15 @@ const stateAdoption: Record<string, number> = {
   Delaware: 60, Maryland: 77, "District of Columbia": 70, Alaska: 30, Hawaii: 40,
 };
 
-// Berry → amber gradient steps matching dashboard theme
+// Monochrome berry/magenta scale matching dashboard primary
 const palette = [
-  "hsl(330 60% 88%)",
-  "hsl(335 65% 75%)",
-  "hsl(340 70% 60%)",
-  "hsl(355 75% 50%)",
-  "hsl(15 80% 52%)",
-  "hsl(30 85% 58%)",
-  "hsl(40 90% 62%)",
+  "hsl(327 50% 92%)",
+  "hsl(327 55% 80%)",
+  "hsl(327 60% 65%)",
+  "hsl(327 65% 50%)",
+  "hsl(327 70% 38%)",
+  "hsl(327 75% 28%)",
+  "hsl(327 80% 18%)",
 ];
 
 const colorScale = scaleQuantize<string>().domain([25, 90]).range(palette);
@@ -48,7 +48,7 @@ export function RegionalHeatmap() {
                   strokeWidth={0.6}
                   style={{
                     default: { outline: "none" },
-                    hover: { outline: "none", fill: "hsl(345 80% 45%)", cursor: "default" },
+                    hover: { outline: "none", fill: "hsl(327 75% 32%)", cursor: "default" },
                     pressed: { outline: "none" },
                   }}
                 >
