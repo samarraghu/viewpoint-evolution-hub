@@ -13,10 +13,10 @@ const reachData = months.map((m, i) => ({
 }));
 
 const colors = {
-  c1: "hsl(222 60% 32%)",
-  c2: "hsl(212 70% 48%)",
-  c3: "hsl(160 60% 42%)",
-  c4: "hsl(20 80% 55%)",
+  c1: "hsl(330 65% 35%)",
+  c2: "hsl(345 75% 50%)",
+  c3: "hsl(20 85% 55%)",
+  c4: "hsl(40 90% 60%)",
 };
 
 export function ReachChart() {
