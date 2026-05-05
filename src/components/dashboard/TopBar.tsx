@@ -4,8 +4,8 @@ export function TopBar() {
   return (
     <header className="bg-gradient-to-r from-primary via-primary to-accent text-primary-foreground px-6 py-4 flex items-center justify-between">
       <div>
-        <h1 className="text-lg font-semibold tracking-tight">Omnichannel Executive Portfolio View</h1>
-        <p className="text-xs opacity-80">Dawnzera · Ionis Pharmaceuticals · FY26</p>
+        <h1 className="text-lg font-semibold tracking-tight">Omnichannel Reporting Dashboard </h1>
+        <p className="text-xs opacity-80"> Executive Summary</p>
       </div>
       <div className="flex items-center gap-4">
         <div className="hidden md:flex items-center gap-2 text-xs bg-white/10 px-3 py-1.5 rounded-full">
