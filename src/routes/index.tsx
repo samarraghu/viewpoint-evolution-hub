@@ -39,10 +39,6 @@ function Dashboard() {
             </Card>
           </div>
 
-          <Card title="Channel-level Incremental Sales Uplift — by Quarter ($M)">
-            <ChannelChart />
-          </Card>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             <Card title="Rep Omnichannel Adoption">
               <RepDonut />
@@ -62,23 +58,14 @@ function Dashboard() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="lg:col-span-2">
+              <Card title="Channel-level Incremental Sales Uplift — by Quarter ($M)">
+                <ChannelChart />
+              </Card>
+            </div>
             <Card title="Organic vs Orchestrated Exposure">
               <ExposureDonut />
-            </Card>
-            <Card title="Exposure Insight">
-              <div className="text-sm text-muted-foreground space-y-3 leading-relaxed">
-                <p>
-                  <span className="font-semibold text-foreground">58% of HCP exposure</span> is now driven by orchestrated NBA suggestions —
-                  a <span className="text-success font-semibold">+9pp lift</span> over the prior period as field reps adopt
-                  recommended sequencing.
-                </p>
-                <p>
-                  Organic touches (42%) remain strong on In-Person calls and RTEs, indicating a healthy blended motion
-                  rather than a fully automated funnel.
-                </p>
-                <p className="text-xs italic">Source: NBA engine attribution model · refreshed daily.</p>
-              </div>
             </Card>
           </div>
         </main>
