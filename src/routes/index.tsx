@@ -61,7 +61,7 @@ function Dashboard() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             <div className="lg:col-span-2">
-              <Card title="US Regional Adoption Heatmap">
+              <Card title="US Regional Omnichannel Adoption — Territory Heatmap">
                 <RegionalHeatmap />
               </Card>
             </div>
