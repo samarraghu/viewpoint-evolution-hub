@@ -122,10 +122,10 @@ const journeyData = ["Awareness → Interest","Interest → Consideration","Cons
 export function JourneyChart() {
   return (
     <ResponsiveContainer width="100%" height={240}>
-      <BarChart data={journeyData} layout="vertical" margin={{ top: 5, right: 10, left: 60, bottom: 0 }}>
+      <BarChart data={journeyData} layout="vertical" margin={{ top: 5, right: 20, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}%`} />
-        <YAxis type="category" dataKey="stage" tick={{ fontSize: 10 }} width={140} />
+        <YAxis type="category" dataKey="stage" tick={{ fontSize: 10 }} width={130} />
         <Tooltip />
         <Legend wrapperStyle={{ fontSize: 10 }} />
         {segments.map((s, i) => (
