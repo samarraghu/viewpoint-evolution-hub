@@ -21,7 +21,7 @@ const colors = {
 
 export function ReachChart() {
   return (
-    <ResponsiveContainer width="100%" height={260}>
+    <ResponsiveContainer width="100%" height={210}>
       <LineChart data={reachData} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis dataKey="month" tick={{ fontSize: 11 }} />
@@ -42,7 +42,7 @@ const adoptionData = ["Q1","Q2","Q3","Q4"].map((q, i) => ({
 }));
 export function AdoptionStack() {
   return (
-    <ResponsiveContainer width="100%" height={260}>
+    <ResponsiveContainer width="100%" height={210}>
       <BarChart data={adoptionData} stackOffset="expand" margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis dataKey="q" tick={{ fontSize: 11 }} />
@@ -90,7 +90,7 @@ export function RepDonut() {
   ];
   return (
     <div className="flex items-center gap-4">
-      <ResponsiveContainer width="55%" height={180}>
+      <ResponsiveContainer width="55%" height={150}>
         <PieChart>
           <Pie data={data} dataKey="value" innerRadius={45} outerRadius={70} paddingAngle={2}>
             {data.map((d) => <Cell key={d.name} fill={d.color} />)}
@@ -121,7 +121,7 @@ const journeyData = ["Awareness → Interest","Interest → Consideration","Cons
 }));
 export function JourneyChart() {
   return (
-    <ResponsiveContainer width="100%" height={240}>
+    <ResponsiveContainer width="100%" height={200}>
       <BarChart data={journeyData} layout="vertical" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
         <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}%`} />
