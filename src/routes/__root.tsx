@@ -29,8 +29,8 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Dawnzera · Omnichannel Executive Portfolio" },
+      { name: "description", content: "Dawnzera omnichannel executive portfolio dashboard — NBA acceptance, channel uplift, and HCP journey insights." },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
       { property: "og:description", content: "Lovable Generated Project" },
