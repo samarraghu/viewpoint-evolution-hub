@@ -13,10 +13,10 @@ const reachData = months.map((m, i) => ({
 }));
 
 const colors = {
-  c1: "hsl(222 60% 32%)",
-  c2: "hsl(212 70% 48%)",
-  c3: "hsl(160 60% 42%)",
-  c4: "hsl(20 80% 55%)",
+  c1: "hsl(330 65% 35%)",
+  c2: "hsl(345 75% 50%)",
+  c3: "hsl(20 85% 55%)",
+  c4: "hsl(40 90% 60%)",
 };
 
 export function ReachChart() {
@@ -73,10 +73,10 @@ export function ChannelChart() {
         <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `$${v}M`} />
         <Tooltip formatter={(v: number) => `$${v.toFixed(1)}M`} />
         <Legend wrapperStyle={{ fontSize: 11 }} />
-        <Bar dataKey="Q1" fill="hsl(222 70% 25%)" />
-        <Bar dataKey="Q2" fill="hsl(218 65% 38%)" />
-        <Bar dataKey="Q3" fill="hsl(212 65% 52%)" />
-        <Bar dataKey="Q4" fill="hsl(208 70% 70%)" />
+        <Bar dataKey="Q1" fill="hsl(330 60% 30%)" />
+        <Bar dataKey="Q2" fill="hsl(345 70% 45%)" />
+        <Bar dataKey="Q3" fill="hsl(15 80% 55%)" />
+        <Bar dataKey="Q4" fill="hsl(40 90% 65%)" />
       </BarChart>
     </ResponsiveContainer>
   );
