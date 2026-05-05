@@ -5,8 +5,9 @@ import { Filters } from "@/components/dashboard/Filters";
 import { KpiBar } from "@/components/dashboard/KpiBar";
 import { Card } from "@/components/dashboard/Card";
 import {
-  ReachChart, AdoptionStack, ChannelChart, RepDonut, JourneyChart, ExposureDonut,
+  ReachChart, AdoptionStack, RepDonut, JourneyChart, ExposureDonut,
 } from "@/components/dashboard/Charts";
+import { RegionalHeatmap } from "@/components/dashboard/RegionalHeatmap";
 
 export const Route = createFileRoute("/")({
   component: Dashboard,
@@ -60,8 +61,8 @@ function Dashboard() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             <div className="lg:col-span-2">
-              <Card title="Channel-level Incremental Sales Uplift — by Quarter ($M)">
-                <ChannelChart />
+              <Card title="US Regional Adoption Heatmap">
+                <RegionalHeatmap />
               </Card>
             </div>
             <Card title="Organic vs Orchestrated Exposure">
