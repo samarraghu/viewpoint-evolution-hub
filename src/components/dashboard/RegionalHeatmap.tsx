@@ -31,8 +31,8 @@ const colorScale = scaleQuantize<string>().domain([25, 90]).range(palette);
 
 export function RegionalHeatmap() {
   return (
-    <div>
-      <ComposableMap projection="geoAlbersUsa" width={800} height={460} style={{ width: "100%", height: "auto" }}>
+    <div className="max-w-[460px] mx-auto">
+      <ComposableMap projection="geoAlbersUsa" width={800} height={420} style={{ width: "100%", height: "auto" }}>
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies.map((geo) => {

@@ -143,18 +143,18 @@ export function ExposureDonut() {
   ];
   return (
     <div>
-      <ResponsiveContainer width="100%" height={220}>
+      <ResponsiveContainer width="100%" height={160}>
         <PieChart>
-          <Pie data={data} dataKey="value" innerRadius={55} outerRadius={90} paddingAngle={2}>
+          <Pie data={data} dataKey="value" innerRadius={40} outerRadius={65} paddingAngle={2}>
             {data.map((d) => <Cell key={d.name} fill={d.color} />)}
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div className="grid grid-cols-2 gap-3 mt-2">
+      <div className="grid grid-cols-2 gap-2 mt-1">
         {data.map((d) => (
-          <div key={d.name} className="bg-muted/40 rounded-md px-3 py-2">
-            <div className="text-[11px] text-muted-foreground">{d.name}</div>
-            <div className="text-xl font-semibold" style={{ color: d.color }}>{d.value}%</div>
+          <div key={d.name} className="bg-muted/40 rounded-md px-2 py-1.5">
+            <div className="text-[10px] text-muted-foreground">{d.name}</div>
+            <div className="text-lg font-semibold" style={{ color: d.color }}>{d.value}%</div>
           </div>
         ))}
       </div>
