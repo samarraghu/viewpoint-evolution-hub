@@ -129,7 +129,7 @@ export function JourneyChart() {
         <Tooltip />
         <Legend wrapperStyle={{ fontSize: 10 }} />
         {segments.map((s, i) => (
-          <Bar key={s} dataKey={s.replace(" ", "")} name={s} fill={[colors.c1, colors.c2, colors.c3, "hsl(45 85% 55%)"][i]} />
+          <Bar key={s} dataKey={s.replace(" ", "")} name={s} fill={[colors.c1, colors.c2, colors.c3, colors.c4][i]} />
         ))}
       </BarChart>
     </ResponsiveContainer>
