@@ -2,7 +2,7 @@ import { RefreshCw, User } from "lucide-react";
 
 export function TopBar() {
   return (
-    <header className="bg-gradient-to-r from-primary via-primary to-accent text-primary-foreground px-6 py-4 flex items-center justify-between">
+    <header className="bg-gradient-to-r from-primary via-primary to-accent text-primary-foreground px-6 py-6 flex items-center justify-between min-h-[104px]">
       <div>
         <h1 className="text-lg font-semibold tracking-tight">Omnichannel Reporting Dashboard </h1>
         <p className="text-xs opacity-80"> Executive Summary</p>
