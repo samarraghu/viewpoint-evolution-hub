@@ -48,7 +48,7 @@ export function RegionalHeatmap() {
                   strokeWidth={0.6}
                   style={{
                     default: { outline: "none" },
-                    hover: { outline: "none", fill: "hsl(345 80% 45%)", cursor: "default" },
+                    hover: { outline: "none", fill: "hsl(327 75% 32%)", cursor: "default" },
                     pressed: { outline: "none" },
                   }}
                 >
