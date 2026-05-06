@@ -5,7 +5,7 @@ import { Filters } from "@/components/dashboard/Filters";
 import { KpiBar } from "@/components/dashboard/KpiBar";
 import { Card } from "@/components/dashboard/Card";
 import {
-  ReachChart, RepDonut, JourneyChart, ExposureDonut,
+  ReachChart, RepDonut, JourneyChart, ExposureDonut, MultiChannelReach,
 } from "@/components/dashboard/Charts";
 import { RegionalHeatmap } from "@/components/dashboard/RegionalHeatmap";
 
@@ -31,9 +31,12 @@ function Dashboard() {
         <main className="flex-1 px-6 pb-6 space-y-3">
           <KpiBar />
 
-          <div className="grid grid-cols-1 gap-3 mt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-1">
             <Card title="Reach & NBA Trends — Monthly">
               <ReachChart />
+            </Card>
+            <Card title="Multi-Channel Reach Distribution">
+              <MultiChannelReach />
             </Card>
           </div>
 
