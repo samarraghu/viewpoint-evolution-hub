@@ -1,6 +1,6 @@
 const kpis = [
-  { label: "Incremental sales lift", value: "$42.3M", delta: "+11.4% vs prior period", tone: "success" },
   { label: "HCPs reached (unique)", value: "68,410", delta: "+8.2% vs prior period", tone: "success" },
+  { label: "Multi-Channel Reach ≥3", value: "34.1%", delta: "+6.2pp vs prior period", tone: "success" },
   { label: "NBA Acceptance", value: "73.4%", delta: "+5.1pp vs prior period", tone: "success" },
   { label: "NBA Rejection / opt-out rate", value: "18.2%", delta: "+1.3pp vs prior period", tone: "warning" },
 ];
