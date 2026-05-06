@@ -31,9 +31,12 @@ function Dashboard() {
         <main className="flex-1 px-6 pb-6 space-y-3">
           <KpiBar />
 
-          <div className="grid grid-cols-1 gap-3 mt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-1">
             <Card title="Reach & NBA Trends — Monthly">
               <ReachChart />
+            </Card>
+            <Card title="Multi-Channel Reach Distribution">
+              <MultiChannelReach />
             </Card>
           </div>
 
