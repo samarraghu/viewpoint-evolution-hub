@@ -5,7 +5,7 @@ import { Filters } from "@/components/dashboard/Filters";
 import { KpiBar } from "@/components/dashboard/KpiBar";
 import { Card } from "@/components/dashboard/Card";
 import {
-  ReachChart, RepDonut, JourneyChart, ExposureDonut,
+  ReachChart, RepDonut, JourneyChart, ExposureDonut, MultiChannelReach,
 } from "@/components/dashboard/Charts";
 import { RegionalHeatmap } from "@/components/dashboard/RegionalHeatmap";
 
