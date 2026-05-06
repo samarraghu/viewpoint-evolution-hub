@@ -41,6 +41,58 @@ export function ReachChart() {
 const adoptionData = ["Q1","Q2","Q3","Q4"].map((q, i) => ({
   q, adoption: 64 + i * 3, rejection: 36 - i * 3,
 }));
+const channelReachData = [
+  { label: "1 channel only", value: 26000, pct: 38.0, color: colors.c1 },
+  { label: "2 channels", value: 19100, pct: 27.9, color: colors.c2 },
+  { label: "3 channels", value: 14370, pct: 21.0, color: colors.c3 },
+  { label: "4+ channels", value: 8940, pct: 13.1, color: colors.c4 },
+];
+const totalHcps = channelReachData.reduce((s, d) => s + d.value, 0);
+const maxChannelValue = Math.max(...channelReachData.map((d) => d.value));
+
+export function MultiChannelReach() {
+  return (
+    <div className="space-y-2.5">
+      <div className="flex items-center justify-between text-[11px] text-muted-foreground">
+        <span>% HCPs by number of channels touched</span>
+        <span className="px-2 py-0.5 rounded-md bg-muted font-medium text-foreground">
+          {totalHcps.toLocaleString()} total HCPs
+        </span>
+      </div>
+      <div className="space-y-2">
+        {channelReachData.map((d) => (
+          <div key={d.label} className="grid grid-cols-[90px_1fr_44px] items-center gap-2 text-xs">
+            <span className="text-muted-foreground">{d.label}</span>
+            <div className="relative h-6 rounded-md bg-muted/60 overflow-hidden">
+              <div
+                className="h-full rounded-md flex items-center px-2 text-[11px] font-semibold text-white transition-all"
+                style={{ width: `${(d.value / maxChannelValue) * 100}%`, background: d.color }}
+              >
+                {d.value.toLocaleString()}
+              </div>
+            </div>
+            <span className="text-right font-medium text-muted-foreground">{d.pct}%</span>
+          </div>
+        ))}
+      </div>
+      <div className="grid grid-cols-3 gap-2 pt-2 border-t">
+        <div>
+          <div className="text-[10px] text-muted-foreground">Avg channels / HCP</div>
+          <div className="text-base font-semibold">2.1</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Target (≥3 channels)</div>
+          <div className="text-base font-semibold" style={{ color: colors.c2 }}>34.1%</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Prior period ≥3</div>
+          <div className="text-base font-semibold text-muted-foreground">27.9%</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function AdoptionStack() {
   return (
     <ResponsiveContainer width="100%" height={210}>
