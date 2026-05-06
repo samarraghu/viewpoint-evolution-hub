@@ -85,9 +85,9 @@ export function ChannelChart() {
 
 export function RepDonut() {
   const data = [
-    { name: "Adopted", value: 1246, color: colors.c3 },
-    { name: "Not adopted", value: 321, color: colors.c4 },
-    { name: "Partial", value: 112, color: "hsl(45 90% 55%)" },
+    { name: "High adoption", value: 1246, color: colors.c1 },
+    { name: "Medium adoption", value: 112, color: "hsl(45 90% 55%)" },
+    { name: "Low adoption", value: 321, color: colors.c4 },
   ];
   return (
     <div className="flex items-center gap-4">

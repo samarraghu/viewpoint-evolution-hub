@@ -14,11 +14,11 @@ export const Route = createFileRoute("/")({
 });
 
 const dismissed = [
-  { reason: "HCP not interested", pct: "78%" },
-  { reason: "Already detailed recently", pct: "62%" },
-  { reason: "Competing brand priority", pct: "49%" },
-  { reason: "Channel timing conflict", pct: "37%" },
-  { reason: "Content not relevant", pct: "24%" },
+  { reason: "Suggestion not relevant", pct: "78%" },
+  { reason: "No access to HCP", pct: "62%" },
+  { reason: "Content not relevant", pct: "49%" },
+  { reason: "HCP on vacation", pct: "37%" },
+  { reason: "Reached HCP recently", pct: "24%" },
 ];
 
 function Dashboard() {
